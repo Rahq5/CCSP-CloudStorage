@@ -49,20 +49,21 @@ need to be disscussed for more things
    - modem's server virtual or direct forwarding
 ## 1.6 Technology Stack
 ### Back-end:
-- **Back-End language** : Node.js
-- **Framework** : Express.js
+- **Back-End language** :Java
+- **Framework** : SpringBoot
 - **Database** : SQLite
 - **Authentications** : (==to be discussed later==) JWT
 - **File Upload** : (==to be discussed later==) multer
 - **security** : (==to be discussed later==)
 ### Front-end:
-- **Language** : React.js 
+- **Framework** : React.js 
 ### Development tools:
 - **Version control**: Git & GitHub
 - **Code Editor**: VSCode
 - **Containerization**: Docker
 - **Testing tools**:
 	- for **API**: Postman
+	- Unit Testing: (==to be discussed later==)
 	- for others: (==to be discussed later==)
 
 ### Production Environment:
