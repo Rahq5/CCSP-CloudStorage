@@ -44,9 +44,8 @@ need to be disscussed for more things
 ## 1.5 Constraints and Assumptions
 ### Constraints (==to be discussed later==)
 1. buying a custom domain with yearly payment  in 10-20$
-2. exposing server to internet requires one of two options:
-   - cloudflare tunneling
-   - modem's server virtual or direct forwarding
+2. exposing server to internet requires cloudflare tunneling
+   
 ## 1.6 Technology Stack
 ### Back-end:
 - **Back-End language** :Java
@@ -61,21 +60,36 @@ need to be disscussed for more things
 - **Version control**: Git & GitHub
 - **Code Editor**: VSCode
 - **Containerization**: Docker
-- **Testing tools**:
-	- for **API**: Postman
-	- Unit Testing: (==to be discussed later==)
-	- for others: (==to be discussed later==)
+#### **Testing tools**:
+- **Functional (Top Priority)**
+	- **API Testing:** Postman
+	- **Unit Testing:** JUnit (JUnit 5)
+	- **Integration Testing:** Mockito 
+	- **Database Testing:** H2 (In-memory database), Oracle DB
 
+- **Functional (Less Priority)**
+	- **Regression Testing:** Maven (`mvn test`) and JUnit
+
+- **Non-Functional (Most Priority)**
+	- **Security Testing:** 
+		- SpotBugs (Static Analysis) 
+		- BCrypt (Password Hashing) 
+	- **Performance Testing (Load & Stress):** JMeter
+	  
+- **Non-Functional (Less Priority)**
+	- **Compatibility Testing:** Selenium Grid
+	- **Automated UI Testing:** Selenium WebDriver / Selenium IDE    
+	- **Defect Tracking:** Todoist
+	- **Continuous Integration (CI):** Jenkins and GitHub Actions
 ### Production Environment:
 - **Protocol** : HTTP \ HTTPS
 -  **WebServer**: (==to be discussed later==)
 - **Operating System**: Debian
 - **Hardware**: 
-	- initially: local Huawei D14 (my laptop)
-	- Future: Raspberry Pi 5 
+	- Huawei D14 (my laptop)
+	- Raspberry Pi 5 
 - **Storage** :
-	- initially: local Huawei D14 storage (my laptop disk)
-	- Future: Raspberry Pi 5 
+	- Raspberry Pi 5 (128GB) 
 
 
 ## 1.7 System Limitations
