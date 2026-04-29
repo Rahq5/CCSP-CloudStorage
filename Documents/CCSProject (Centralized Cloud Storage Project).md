@@ -96,3 +96,6 @@ need to be disscussed for more things
 # 2.0 Design (not reached yet...)
 
 ## 2.1 System Architecture  
+
+-  for security reasons make a middleware between client and server so the client acts with the proxy(middleware) and 
+directly 
