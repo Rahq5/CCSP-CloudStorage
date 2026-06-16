@@ -1,4 +1,3 @@
-DA7M go check Documents > CCSProject.md > constraints and assumptions > constraints
 
 # 1.0 Documentation (not completed yet...)
 ## 1.1 Introduction
