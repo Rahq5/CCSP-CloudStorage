@@ -21,16 +21,21 @@ public class FileController {
         return ResponseEntity.ok("request arrived");
     }
 
+    // recevies file with name 
+    // if the file has data will process to start saving it ot otherwise it will send a bad request reponse
     @PostMapping("/add")
     public ResponseEntity<?> addFile(@RequestParam("name")String name , @RequestParam("file") MultipartFile file){
 
         try{
 
             if(!file.isEmpty()){
+                // this is what am avoiding!
+                // it will load instantly in the ram which gonna choke it  
                 byte[] bytes = file.getBytes();
+                
                 return new ResponseEntity<>("the file"+name+ "has uploaded successfully",HttpStatus.CREATED);
             }else{
-                return new ResponseEntity<>("the file"+name+ " failed to uploaded! ",HttpStatus.BAD_REQUEST);
+                return new ResponseEntity<>("the file"+name+ " is empty! ",HttpStatus.BAD_REQUEST);
             }
 
         } catch(IOException e){

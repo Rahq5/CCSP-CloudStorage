@@ -60,6 +60,10 @@ Controller (HTTP layer) → Service (business logic) → Repository (data access
 
 **Main method: uploadFile(MultipartFile file, String name)**
 
+Task: 
+1. sanitize file name
+2. starts uploading 
+
 Responsibilities:
 - Sanitize the filename (extract safe name, no path traversal)
 - Construct full path (uploadDir + sanitized filename)
