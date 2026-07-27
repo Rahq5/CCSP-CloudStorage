@@ -2,11 +2,15 @@ package com.solidsudogear.ccsp.Controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.UUID;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +27,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RestController
 @RequestMapping("/file")
 public class UploadExpController {
+
+    @Value("${upload.dir}")
+    private String uploadDir;
+
+    @Value("${buffer.size.upload}")
+    private int BufferSize;
     
 /*
 
@@ -54,13 +64,13 @@ public class UploadExpController {
         return "hello";
     }
 
-    // uploading files
+    // uploading files using .getBytes() chokes the RAM on high volumes 
     @PostMapping(value="/upload")
     public ResponseEntity<?> uploadFile(@RequestParam MultipartFile file){
        
         // making directory and saving it to files object so each file know where to be saved  
-        String dir ="uploads";
-        File directory = new File(dir);
+        // String dir ="uploads";
+        File directory = new File(uploadDir);
 
         // check if file exist
         if(!directory.exists()){
@@ -71,7 +81,7 @@ public class UploadExpController {
         try {
 
             String filename = UUID.randomUUID()+ "  "+file.getOriginalFilename();
-            Path filePath =  Paths.get(dir +File.separator+ filename);
+            Path filePath =  Paths.get(uploadDir +File.separator+ filename);
             Files.write(filePath , file.getBytes());
             return ResponseEntity.ok("file is uploaded and stored:" + file.getOriginalFilename());
 
@@ -82,6 +92,45 @@ public class UploadExpController {
         
 
     }
-    
+
+
+    // this uploads using streamingIO 
+    @PostMapping(value="/uploadStream")
+    public ResponseEntity<String> uploadUsingStream(@RequestParam("file") MultipartFile file){
+        
+        // check if file is empty 
+        if (file.isEmpty()){
+            return ResponseEntity.badRequest().body("file is empty");
+        }
+
+        // create path to destination 
+        Path filePath = Paths.get(uploadDir +File.separator+file.getOriginalFilename());
+
+
+        try(
+            // establish stream input to the received file and output to destination
+            InputStream inputStream = file.getInputStream();
+            OutputStream outputStream = Files.newOutputStream(filePath, StandardOpenOption.CREATE);
+
+        ){
+             // declare the byte counter and loop of reading the bytes
+            byte[] Buffer = new byte[BufferSize];
+            int bytesRead; 
+
+            while((bytesRead = inputStream.read(Buffer) ) !=-1 ){
+                outputStream.write(Buffer, 0, bytesRead);
+            }
+
+            return ResponseEntity.ok("file has uploaded successfully: "+ file.getOriginalFilename());
+
+        }catch(IOException e){
+
+            // place exciption for IOExeption in case of reading\writing error showing message 
+            return ResponseEntity.internalServerError().body("uploading failed: "+e.getMessage());
+        }
+
+        
+    }
+  
     
 }
