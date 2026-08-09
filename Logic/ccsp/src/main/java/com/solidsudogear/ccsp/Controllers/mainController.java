@@ -9,6 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -20,6 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.solidsudogear.ccsp.Entity.FileInfo;
+import com.solidsudogear.ccsp.Service.uploadingService;
+
 import org.springframework.web.bind.annotation.GetMapping;
 
 
@@ -32,6 +35,9 @@ public class mainController  {
 
     @Value("${buffer.size.upload}")
     private int BufferSize;
+
+    @Autowired
+    private uploadingService uploadingService;
     
 /*
 
@@ -65,41 +71,14 @@ public class mainController  {
 
 
     // this uploads using streamingIO 
-    @PostMapping(value="/uploadStream")
+    @PostMapping(value="/upload")
     public ResponseEntity<String> uploadUsingStream(@RequestParam("file") MultipartFile file){
         
-        // check if file is empty 
-        if (file.isEmpty()){
-            return ResponseEntity.badRequest().body("file is empty");
-        }
-
-        // create path to destination 
-        Path filePath = Paths.get(uploadDir +File.separator+file.getOriginalFilename());
-
-
-        try(
-            // establish stream input to the received file and output to destination
-            InputStream inputStream = file.getInputStream();
-            OutputStream outputStream = Files.newOutputStream(filePath, StandardOpenOption.CREATE);
-
-        ){
-             // declare the byte counter and loop of reading the bytes
-            byte[] Buffer = new byte[BufferSize];
-            int bytesRead; 
-
-            while((bytesRead = inputStream.read(Buffer) ) !=-1 ){
-                outputStream.write(Buffer, 0, bytesRead);
-            }
-
-            return ResponseEntity.ok("file has uploaded successfully: "+ file.getOriginalFilename());
-
-        }catch(IOException e){
-
-            // place exciption for IOExeption in case of reading\writing error showing message 
-            return ResponseEntity.internalServerError().body("uploading failed: "+e.getMessage());
-        }
-
+       
+        String filname = uploadingService.uploading(file);
+        return ResponseEntity.ok("file has uploaded successfully: "+ filname);
         
+
     }
   
     

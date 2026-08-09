@@ -84,3 +84,479 @@
 2026-08-09T10:09:36.606+03:00  WARN 41731 --- [ccsp] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
 2026-08-09T10:09:36.606+03:00  INFO 41731 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
 2026-08-09T10:09:36.606+03:00  INFO 41731 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-08-09T11:25:42.398+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 69343 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-08-09T11:25:42.400+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T11:25:42.427+03:00  INFO 69343 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-09T11:25:42.427+03:00  INFO 69343 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-09T11:25:42.810+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T11:25:42.822+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2026-08-09T11:25:43.044+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-09T11:25:43.052+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T11:25:43.053+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-09T11:25:43.072+03:00  INFO 69343 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 645 ms
+2026-08-09T11:25:43.147+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-09T11:25:43.245+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:2d539b41-3591-4eb9-b1d0-bf8524339476 user=SA
+2026-08-09T11:25:43.246+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-09T11:25:43.265+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-09T11:25:43.288+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-08-09T11:25:43.483+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T11:25:43.522+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:2d539b41-3591-4eb9-b1d0-bf8524339476]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 2D539B41-3591-4EB9-B1D0-BF8524339476/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-09T11:25:43.708+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T11:25:43.712+03:00  INFO 69343 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:25:43.779+03:00  WARN 69343 --- [ccsp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-09T11:25:43.998+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:2d539b41-3591-4eb9-b1d0-bf8524339476'
+2026-08-09T11:25:44.026+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-09T11:25:44.031+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 1.847 seconds (process running for 2.054)
+2026-08-09T11:25:44.032+03:00  WARN 69343 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-08-09T11:25:44.032+03:00  WARN 69343 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-08-09T11:26:01.408+03:00  INFO 69343 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-08-09T11:26:01.411+03:00  INFO 69343 --- [ccsp] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-09T11:26:01.414+03:00  INFO 69343 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-09T11:26:01.416+03:00  INFO 69343 --- [ccsp] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:26:01.420+03:00  WARN 69343 --- [ccsp] [Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-08-09T11:26:01.421+03:00  INFO 69343 --- [ccsp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-09T11:26:01.422+03:00  INFO 69343 --- [ccsp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-09T11:26:01.471+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 69343 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-08-09T11:26:01.471+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T11:26:01.557+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T11:26:01.559+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2026-08-09T11:26:01.597+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-09T11:26:01.598+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T11:26:01.598+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-09T11:26:01.603+03:00  INFO 69343 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 131 ms
+2026-08-09T11:26:01.623+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-08-09T11:26:01.625+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:ffa94f74-a620-4ede-8afc-32da785812cc user=SA
+2026-08-09T11:26:01.625+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-08-09T11:26:01.626+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-09T11:26:01.637+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T11:26:01.639+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ffa94f74-a620-4ede-8afc-32da785812cc]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: FFA94F74-A620-4EDE-8AFC-32DA785812CC/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-09T11:26:01.649+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T11:26:01.649+03:00  INFO 69343 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:26:01.672+03:00  WARN 69343 --- [ccsp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-09T11:26:01.728+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ffa94f74-a620-4ede-8afc-32da785812cc'
+2026-08-09T11:26:01.735+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-09T11:26:01.738+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.277 seconds (process running for 19.761)
+2026-08-09T11:26:01.738+03:00  WARN 69343 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-08-09T11:26:01.738+03:00  WARN 69343 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-08-09T11:26:01.739+03:00  INFO 69343 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-09T11:26:40.749+03:00  INFO 69343 --- [ccsp] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-09T11:26:40.749+03:00  INFO 69343 --- [ccsp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-09T11:26:40.750+03:00  INFO 69343 --- [ccsp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-09T11:26:40.966+03:00 ERROR 69343 --- [ccsp] [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.solidsudogear.ccsp.Service.uploadingService.uploading(org.springframework.web.multipart.MultipartFile)" because "this.uploadingService" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "com.solidsudogear.ccsp.Service.uploadingService.uploading(org.springframework.web.multipart.MultipartFile)" because "this.uploadingService" is null
+	at com.solidsudogear.ccsp.Controllers.mainController.uploadUsingStream(mainController.java:76) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.7.jar:7.0.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:653) ~[jakarta.servlet-api-6.1.0.jar:6.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723) ~[jakarta.servlet-api-6.1.0.jar:6.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.21.jar:11.0.21]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.7.jar:7.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar:7.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.7.jar:7.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar:7.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.7.jar:7.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar:7.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.21.jar:11.0.21]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+2026-08-09T11:27:39.179+03:00  INFO 69343 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-08-09T11:27:39.179+03:00  INFO 69343 --- [ccsp] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-09T11:27:39.180+03:00  INFO 69343 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-09T11:27:39.181+03:00  INFO 69343 --- [ccsp] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:27:39.182+03:00  WARN 69343 --- [ccsp] [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-08-09T11:27:39.182+03:00  INFO 69343 --- [ccsp] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-08-09T11:27:39.182+03:00  INFO 69343 --- [ccsp] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-08-09T11:27:39.238+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 69343 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-08-09T11:27:39.238+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T11:27:39.313+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T11:27:39.315+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-08-09T11:27:39.354+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-09T11:27:39.354+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T11:27:39.354+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-09T11:27:39.358+03:00  INFO 69343 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 119 ms
+2026-08-09T11:27:39.378+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-08-09T11:27:39.379+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:6f0b67cc-fd1c-49a9-a6b8-d933b1ff2c89 user=SA
+2026-08-09T11:27:39.380+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-08-09T11:27:39.380+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-09T11:27:39.389+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T11:27:39.390+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:6f0b67cc-fd1c-49a9-a6b8-d933b1ff2c89]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 6F0B67CC-FD1C-49A9-A6B8-D933B1FF2C89/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-09T11:27:39.401+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T11:27:39.401+03:00  INFO 69343 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:27:39.412+03:00  WARN 69343 --- [ccsp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mainController' defined in file [/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes/com/solidsudogear/ccsp/Controllers/mainController.class]: Failed to instantiate [com.solidsudogear.ccsp.Controllers.mainController]: Constructor threw exception
+2026-08-09T11:27:39.412+03:00  INFO 69343 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:27:39.412+03:00  WARN 69343 --- [ccsp] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-08-09T11:27:39.413+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-08-09T11:27:39.413+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-08-09T11:27:39.414+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-09T11:27:39.416+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-09T11:27:39.423+03:00 ERROR 69343 --- [ccsp] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mainController' defined in file [/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes/com/solidsudogear/ccsp/Controllers/mainController.class]: Failed to instantiate [com.solidsudogear.ccsp.Controllers.mainController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1231) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.solidsudogear.ccsp.CcspApplication.main(CcspApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.6.jar:4.0.6]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.solidsudogear.ccsp.Controllers.mainController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:220) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:106) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "@", Identifier expected after this token
+
+	at com.solidsudogear.ccsp.Controllers.mainController.<init>(mainController.java:38) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:194) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 24 common frames omitted
+
+2026-08-09T11:27:41.836+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 69343 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-08-09T11:27:41.836+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T11:27:41.899+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T11:27:41.901+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-08-09T11:27:41.932+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-09T11:27:41.932+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T11:27:41.933+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-09T11:27:41.937+03:00  INFO 69343 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 100 ms
+2026-08-09T11:27:41.953+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-08-09T11:27:41.955+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn21: url=jdbc:h2:mem:241aff8d-a7e6-4d9e-8288-57989d544f6d user=SA
+2026-08-09T11:27:41.955+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-08-09T11:27:41.956+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-09T11:27:41.965+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T11:27:41.966+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:241aff8d-a7e6-4d9e-8288-57989d544f6d]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 241AFF8D-A7E6-4D9E-8288-57989D544F6D/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-09T11:27:41.976+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T11:27:41.977+03:00  INFO 69343 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:27:41.987+03:00  WARN 69343 --- [ccsp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainController': Unsatisfied dependency expressed through field 'uploadingService': No qualifying bean of type 'com.solidsudogear.ccsp.Service.uploadingService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2026-08-09T11:27:41.987+03:00  INFO 69343 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:27:41.988+03:00  WARN 69343 --- [ccsp] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-08-09T11:27:41.988+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-08-09T11:27:41.989+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-08-09T11:27:41.989+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-09T11:27:41.990+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-09T11:27:41.993+03:00 ERROR 69343 --- [ccsp] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field uploadingService in com.solidsudogear.ccsp.Controllers.mainController required a bean of type 'com.solidsudogear.ccsp.Service.uploadingService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.solidsudogear.ccsp.Service.uploadingService' in your configuration.
+
+2026-08-09T11:28:15.418+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 69343 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-08-09T11:28:15.418+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T11:28:15.482+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T11:28:15.483+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-08-09T11:28:15.512+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-09T11:28:15.513+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T11:28:15.513+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-09T11:28:15.516+03:00  INFO 69343 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 97 ms
+2026-08-09T11:28:15.531+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-08-09T11:28:15.532+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn22: url=jdbc:h2:mem:57a3c60c-3134-444b-bf1d-d3c88df93ef9 user=SA
+2026-08-09T11:28:15.533+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-08-09T11:28:15.533+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-09T11:28:15.541+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T11:28:15.542+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:57a3c60c-3134-444b-bf1d-d3c88df93ef9]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 57A3C60C-3134-444B-BF1D-D3C88DF93EF9/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-09T11:28:15.550+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T11:28:15.550+03:00  INFO 69343 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:28:15.558+03:00  WARN 69343 --- [ccsp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainController': Unsatisfied dependency expressed through field 'uploadingService': No qualifying bean of type 'com.solidsudogear.ccsp.Service.uploadingService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2026-08-09T11:28:15.558+03:00  INFO 69343 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:28:15.558+03:00  WARN 69343 --- [ccsp] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-08-09T11:28:15.558+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-08-09T11:28:15.559+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-08-09T11:28:15.559+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-09T11:28:15.560+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-09T11:28:15.561+03:00 ERROR 69343 --- [ccsp] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field uploadingService in com.solidsudogear.ccsp.Controllers.mainController required a bean of type 'com.solidsudogear.ccsp.Service.uploadingService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.solidsudogear.ccsp.Service.uploadingService' in your configuration.
+
+2026-08-09T11:28:18.973+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 69343 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-08-09T11:28:18.973+03:00  INFO 69343 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T11:28:19.033+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T11:28:19.034+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-08-09T11:28:19.062+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-09T11:28:19.063+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T11:28:19.063+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-09T11:28:19.067+03:00  INFO 69343 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 93 ms
+2026-08-09T11:28:19.081+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-08-09T11:28:19.083+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn23: url=jdbc:h2:mem:426734bc-533e-4cf8-a383-91aecf0528a0 user=SA
+2026-08-09T11:28:19.083+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-08-09T11:28:19.083+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-09T11:28:19.092+03:00  INFO 69343 --- [ccsp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T11:28:19.093+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:426734bc-533e-4cf8-a383-91aecf0528a0]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 426734BC-533E-4CF8-A383-91AECF0528A0/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-09T11:28:19.101+03:00  INFO 69343 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T11:28:19.101+03:00  INFO 69343 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:28:19.109+03:00  WARN 69343 --- [ccsp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainController': Unsatisfied dependency expressed through field 'uploadingService': No qualifying bean of type 'com.solidsudogear.ccsp.Service.uploadingService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2026-08-09T11:28:19.109+03:00  INFO 69343 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:28:19.110+03:00  WARN 69343 --- [ccsp] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-08-09T11:28:19.110+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-08-09T11:28:19.110+03:00  INFO 69343 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-08-09T11:28:19.110+03:00  INFO 69343 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-09T11:28:19.112+03:00  INFO 69343 --- [ccsp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-09T11:28:19.113+03:00 ERROR 69343 --- [ccsp] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field uploadingService in com.solidsudogear.ccsp.Controllers.mainController required a bean of type 'com.solidsudogear.ccsp.Service.uploadingService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.solidsudogear.ccsp.Service.uploadingService' in your configuration.
+
+2026-08-09T11:28:32.306+03:00  INFO 70636 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 70636 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-08-09T11:28:32.307+03:00  INFO 70636 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T11:28:32.334+03:00  INFO 70636 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-09T11:28:32.334+03:00  INFO 70636 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-09T11:28:32.710+03:00  INFO 70636 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T11:28:32.725+03:00  INFO 70636 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2026-08-09T11:28:32.958+03:00  INFO 70636 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-09T11:28:32.967+03:00  INFO 70636 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T11:28:32.967+03:00  INFO 70636 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-09T11:28:32.985+03:00  INFO 70636 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 650 ms
+2026-08-09T11:28:33.058+03:00  INFO 70636 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-09T11:28:33.155+03:00  INFO 70636 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:fa5cd58a-390e-4984-892d-8c55f8770cb1 user=SA
+2026-08-09T11:28:33.156+03:00  INFO 70636 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-09T11:28:33.175+03:00  INFO 70636 --- [ccsp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-09T11:28:33.199+03:00  INFO 70636 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-08-09T11:28:33.394+03:00  INFO 70636 --- [ccsp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T11:28:33.433+03:00  INFO 70636 --- [ccsp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:fa5cd58a-390e-4984-892d-8c55f8770cb1]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: FA5CD58A-390E-4984-892D-8C55F8770CB1/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-09T11:28:33.611+03:00  INFO 70636 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T11:28:33.615+03:00  INFO 70636 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:28:33.630+03:00  WARN 70636 --- [ccsp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mainController': Unsatisfied dependency expressed through field 'uploadingService': No qualifying bean of type 'com.solidsudogear.ccsp.Service.uploadingService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2026-08-09T11:28:33.631+03:00  INFO 70636 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:28:33.639+03:00  WARN 70636 --- [ccsp] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-08-09T11:28:33.639+03:00  INFO 70636 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-09T11:28:33.643+03:00  INFO 70636 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-09T11:28:33.644+03:00  INFO 70636 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-09T11:28:33.650+03:00  INFO 70636 --- [ccsp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-09T11:28:33.659+03:00 ERROR 70636 --- [ccsp] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field uploadingService in com.solidsudogear.ccsp.Controllers.mainController required a bean of type 'com.solidsudogear.ccsp.Service.uploadingService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.solidsudogear.ccsp.Service.uploadingService' in your configuration.
+
+2026-08-09T11:28:57.805+03:00  INFO 70915 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 70915 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-08-09T11:28:57.807+03:00  INFO 70915 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-09T11:28:57.837+03:00  INFO 70915 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-09T11:28:57.837+03:00  INFO 70915 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-09T11:28:58.222+03:00  INFO 70915 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-09T11:28:58.233+03:00  INFO 70915 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2026-08-09T11:28:58.460+03:00  INFO 70915 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-09T11:28:58.468+03:00  INFO 70915 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-09T11:28:58.469+03:00  INFO 70915 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-08-09T11:28:58.487+03:00  INFO 70915 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 649 ms
+2026-08-09T11:28:58.559+03:00  INFO 70915 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-09T11:28:58.657+03:00  INFO 70915 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:b3e38bce-26df-4481-a44a-adb8d13013e9 user=SA
+2026-08-09T11:28:58.658+03:00  INFO 70915 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-09T11:28:58.677+03:00  INFO 70915 --- [ccsp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-09T11:28:58.701+03:00  INFO 70915 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-08-09T11:28:58.898+03:00  INFO 70915 --- [ccsp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-09T11:28:58.939+03:00  INFO 70915 --- [ccsp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:b3e38bce-26df-4481-a44a-adb8d13013e9]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: B3E38BCE-26DF-4481-A44A-ADB8D13013E9/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-09T11:28:59.120+03:00  INFO 70915 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-09T11:28:59.125+03:00  INFO 70915 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:28:59.197+03:00  WARN 70915 --- [ccsp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-09T11:28:59.421+03:00  INFO 70915 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:b3e38bce-26df-4481-a44a-adb8d13013e9'
+2026-08-09T11:28:59.450+03:00  INFO 70915 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-09T11:28:59.454+03:00  INFO 70915 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 1.871 seconds (process running for 2.081)
+2026-08-09T11:28:59.456+03:00  WARN 70915 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-08-09T11:28:59.456+03:00  WARN 70915 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-08-09T11:29:03.091+03:00  INFO 70915 --- [ccsp] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-09T11:29:03.091+03:00  INFO 70915 --- [ccsp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-09T11:29:03.092+03:00  INFO 70915 --- [ccsp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-09T11:29:07.215+03:00  INFO 70915 --- [ccsp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-09T11:29:07.250+03:00  INFO 70915 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-09T11:29:07.253+03:00  INFO 70915 --- [ccsp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-09T11:29:07.256+03:00  WARN 70915 --- [ccsp] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-08-09T11:29:07.256+03:00  INFO 70915 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-09T11:29:07.257+03:00  INFO 70915 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
