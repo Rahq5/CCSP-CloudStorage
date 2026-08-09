@@ -66,7 +66,7 @@ public class UploadExpController {
 
     // uploading files using .getBytes() chokes the RAM on high volumes 
     @PostMapping(value="/upload")
-    public ResponseEntity<?> uploadFile(@RequestParam MultipartFile file){
+    public ResponseEntity<?> uploadFile(@RequestParam("file")MultipartFile file){
        
         // making directory and saving it to files object so each file know where to be saved  
         // String dir ="uploads";
