@@ -54,7 +54,6 @@ public class mainController  {
         FileInfo fileInfo = new FileInfo();
 
         fileInfo.setFileName(userFile.getOriginalFilename());
-        fileInfo.setFileName(userFile.getName());
         fileInfo.setFileLength(userFile.getSize());
         fileInfo.setContentType(userFile.getContentType());
         fileInfo.setReadable(userFile.getResource().isReadable());
