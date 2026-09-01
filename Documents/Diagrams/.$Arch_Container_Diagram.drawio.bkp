@@ -25,7 +25,7 @@
         <mxCell id="Fz__JfT5fLdLp7S1KRrQ-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;API App&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Spring boot]&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;provides cloud storage functionality via streaming and http\json&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="140" width="250" x="600" y="130" as="geometry" />
         </mxCell>
-        <mxCell id="Fz__JfT5fLdLp7S1KRrQ-11" edge="1" parent="1" source="Fz__JfT5fLdLp7S1KRrQ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Fz__JfT5fLdLp7S1KRrQ-14">
+        <mxCell id="Fz__JfT5fLdLp7S1KRrQ-11" edge="1" parent="1" source="Fz__JfT5fLdLp7S1KRrQ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="Fz__JfT5fLdLp7S1KRrQ-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Fz__JfT5fLdLp7S1KRrQ-18" connectable="0" parent="Fz__JfT5fLdLp7S1KRrQ-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;b&gt;logic calls to service layer&lt;/b&gt;" vertex="1">
@@ -61,6 +61,14 @@
         <mxCell id="Fz__JfT5fLdLp7S1KRrQ-20" connectable="0" parent="Fz__JfT5fLdLp7S1KRrQ-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;b&gt;send\receive binary file&lt;/b&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.0817" as="geometry">
             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Fz__JfT5fLdLp7S1KRrQ-23" edge="1" parent="1" source="Fz__JfT5fLdLp7S1KRrQ-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="Fz__JfT5fLdLp7S1KRrQ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Fz__JfT5fLdLp7S1KRrQ-24" connectable="0" parent="Fz__JfT5fLdLp7S1KRrQ-23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;b&gt;return confirmation&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;or file metadata&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.327" y="-3" as="geometry">
+            <mxPoint y="-14" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="Fz__JfT5fLdLp7S1KRrQ-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Service layer&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;[Java]&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;handles operations with files&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
