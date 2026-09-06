@@ -87,3 +87,1056 @@
 2026-08-22T21:35:09.659+03:00  WARN 51423 --- [ccsp] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
 2026-08-22T21:35:09.660+03:00  INFO 51423 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-08-22T21:35:09.661+03:00  INFO 51423 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-06T11:40:56.799+03:00  INFO 396842 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 396842 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T11:40:56.800+03:00  INFO 396842 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T11:40:56.827+03:00  INFO 396842 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-06T11:40:56.828+03:00  INFO 396842 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-06T11:40:57.225+03:00  INFO 396842 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-06T11:40:57.237+03:00  INFO 396842 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2026-09-06T11:40:57.475+03:00  INFO 396842 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T11:40:57.485+03:00  INFO 396842 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T11:40:57.485+03:00  INFO 396842 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T11:40:57.505+03:00  INFO 396842 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 677 ms
+2026-09-06T11:40:57.589+03:00  INFO 396842 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-06T11:40:57.708+03:00  INFO 396842 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T11:40:57.709+03:00  INFO 396842 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-06T11:40:57.729+03:00  INFO 396842 --- [ccsp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-06T11:40:57.768+03:00  INFO 396842 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-09-06T11:40:58.001+03:00  INFO 396842 --- [ccsp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-06T11:40:58.050+03:00  INFO 396842 --- [ccsp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:Files_List]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: FILES_LIST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-06T11:40:58.251+03:00  INFO 396842 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-06T11:40:58.255+03:00  INFO 396842 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-06T11:40:58.331+03:00  WARN 396842 --- [ccsp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-06T11:40:58.344+03:00  INFO 396842 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T11:40:58.403+03:00  WARN 396842 --- [ccsp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#getFileData(MultipartFile)
+to {POST [/file/getfileInfo], consumes [multipart/form-data], produces [application/json]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#getFileData(MultipartFile) mapped.
+2026-09-06T11:40:58.404+03:00  INFO 396842 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-06T11:40:58.407+03:00  WARN 396842 --- [ccsp] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T11:40:58.407+03:00  INFO 396842 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-06T11:40:58.408+03:00  INFO 396842 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-06T11:40:58.409+03:00  INFO 396842 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-06T11:40:58.415+03:00  INFO 396842 --- [ccsp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-06T11:40:58.422+03:00 ERROR 396842 --- [ccsp] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#getFileData(MultipartFile)
+to {POST [/file/getfileInfo], consumes [multipart/form-data], produces [application/json]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#getFileData(MultipartFile) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.solidsudogear.ccsp.CcspApplication.main(CcspApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.6.jar:4.0.6]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#getFileData(MultipartFile)
+to {POST [/file/getfileInfo], consumes [multipart/form-data], produces [application/json]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#getFileData(MultipartFile) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:646) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:606) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:327) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:459) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:80) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:294) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:987) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:292) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:261) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:220) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:208) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:158) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 21 common frames omitted
+
+2026-09-06T11:41:03.658+03:00  INFO 397013 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 397013 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T11:41:03.659+03:00  INFO 397013 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T11:41:03.687+03:00  INFO 397013 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-06T11:41:03.687+03:00  INFO 397013 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-06T11:41:04.044+03:00  INFO 397013 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-06T11:41:04.055+03:00  INFO 397013 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2026-09-06T11:41:04.271+03:00  INFO 397013 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T11:41:04.279+03:00  INFO 397013 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T11:41:04.279+03:00  INFO 397013 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T11:41:04.296+03:00  INFO 397013 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 608 ms
+2026-09-06T11:41:04.368+03:00  INFO 397013 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-06T11:41:04.459+03:00  INFO 397013 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T11:41:04.461+03:00  INFO 397013 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-06T11:41:04.479+03:00  INFO 397013 --- [ccsp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-06T11:41:04.502+03:00  INFO 397013 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-09-06T11:41:04.708+03:00  INFO 397013 --- [ccsp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-06T11:41:04.754+03:00  INFO 397013 --- [ccsp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:Files_List]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: FILES_LIST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-06T11:41:04.927+03:00  INFO 397013 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-06T11:41:04.931+03:00  INFO 397013 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-06T11:41:05.002+03:00  WARN 397013 --- [ccsp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-06T11:41:05.014+03:00  INFO 397013 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T11:41:05.071+03:00  WARN 397013 --- [ccsp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#getFileData(MultipartFile)
+to {POST [/file/getfileInfo], consumes [multipart/form-data], produces [application/json]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#getFileData(MultipartFile) mapped.
+2026-09-06T11:41:05.071+03:00  INFO 397013 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-06T11:41:05.074+03:00  WARN 397013 --- [ccsp] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T11:41:05.075+03:00  INFO 397013 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-06T11:41:05.076+03:00  INFO 397013 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-06T11:41:05.077+03:00  INFO 397013 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-06T11:41:05.082+03:00  INFO 397013 --- [ccsp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-06T11:41:05.089+03:00 ERROR 397013 --- [ccsp] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#getFileData(MultipartFile)
+to {POST [/file/getfileInfo], consumes [multipart/form-data], produces [application/json]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#getFileData(MultipartFile) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.solidsudogear.ccsp.CcspApplication.main(CcspApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.6.jar:4.0.6]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#getFileData(MultipartFile)
+to {POST [/file/getfileInfo], consumes [multipart/form-data], produces [application/json]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#getFileData(MultipartFile) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:646) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:606) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:327) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:459) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:80) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:294) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:987) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:292) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:261) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:220) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:208) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:158) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 21 common frames omitted
+
+2026-09-06T11:49:20.257+03:00  INFO 400151 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 400151 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T11:49:20.258+03:00  INFO 400151 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T11:49:20.285+03:00  INFO 400151 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-06T11:49:20.285+03:00  INFO 400151 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-06T11:49:20.816+03:00  INFO 400151 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T11:49:20.823+03:00  INFO 400151 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T11:49:20.824+03:00  INFO 400151 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T11:49:20.848+03:00  INFO 400151 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 563 ms
+2026-09-06T11:49:20.943+03:00  INFO 400151 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T11:49:20.997+03:00  WARN 400151 --- [ccsp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#getFileData(MultipartFile)
+to {POST [/file/getfileInfo], consumes [multipart/form-data], produces [application/json]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#getFileData(MultipartFile) mapped.
+2026-09-06T11:49:20.998+03:00  INFO 400151 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-06T11:49:21.005+03:00  INFO 400151 --- [ccsp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-06T11:49:21.013+03:00 ERROR 400151 --- [ccsp] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#getFileData(MultipartFile)
+to {POST [/file/getfileInfo], consumes [multipart/form-data], produces [application/json]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#getFileData(MultipartFile) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.solidsudogear.ccsp.CcspApplication.main(CcspApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.6.jar:4.0.6]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#getFileData(MultipartFile)
+to {POST [/file/getfileInfo], consumes [multipart/form-data], produces [application/json]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#getFileData(MultipartFile) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:646) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:606) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:327) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:459) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:80) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:294) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:987) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:292) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:261) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:220) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:208) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:158) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 21 common frames omitted
+
+2026-09-06T11:52:38.704+03:00  INFO 401480 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 401480 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T11:52:38.705+03:00  INFO 401480 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T11:52:38.731+03:00  INFO 401480 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-06T11:52:38.731+03:00  INFO 401480 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-06T11:52:39.279+03:00  INFO 401480 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T11:52:39.287+03:00  INFO 401480 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T11:52:39.287+03:00  INFO 401480 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T11:52:39.305+03:00  INFO 401480 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 573 ms
+2026-09-06T11:52:39.398+03:00  INFO 401480 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T11:52:39.452+03:00  WARN 401480 --- [ccsp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#getFileData(MultipartFile)
+to {POST [/file/getfileInfo], consumes [multipart/form-data], produces [application/json]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#getFileData(MultipartFile) mapped.
+2026-09-06T11:52:39.453+03:00  INFO 401480 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-06T11:52:39.460+03:00  INFO 401480 --- [ccsp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-06T11:52:39.467+03:00 ERROR 401480 --- [ccsp] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#getFileData(MultipartFile)
+to {POST [/file/getfileInfo], consumes [multipart/form-data], produces [application/json]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#getFileData(MultipartFile) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.solidsudogear.ccsp.CcspApplication.main(CcspApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.6.jar:4.0.6]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#getFileData(MultipartFile)
+to {POST [/file/getfileInfo], consumes [multipart/form-data], produces [application/json]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#getFileData(MultipartFile) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:646) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:606) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:327) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:459) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:80) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:294) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:987) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:292) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:261) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:220) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:208) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:158) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 21 common frames omitted
+
+2026-09-06T11:54:52.721+03:00  INFO 402411 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 402411 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T11:54:52.723+03:00  INFO 402411 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T11:54:52.756+03:00  INFO 402411 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-06T11:54:52.756+03:00  INFO 402411 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-06T11:54:53.278+03:00  INFO 402411 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T11:54:53.288+03:00  INFO 402411 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T11:54:53.288+03:00  INFO 402411 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T11:54:53.307+03:00  INFO 402411 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 550 ms
+2026-09-06T11:54:53.401+03:00  INFO 402411 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T11:54:53.454+03:00  WARN 402411 --- [ccsp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#greetings()
+to {GET [/file/Hello]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#greetings() mapped.
+2026-09-06T11:54:53.455+03:00  INFO 402411 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-06T11:54:53.466+03:00  INFO 402411 --- [ccsp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-06T11:54:53.473+03:00 ERROR 402411 --- [ccsp] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#greetings()
+to {GET [/file/Hello]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#greetings() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.solidsudogear.ccsp.CcspApplication.main(CcspApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.6.jar:4.0.6]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#greetings()
+to {GET [/file/Hello]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#greetings() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:646) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:606) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:327) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:459) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:80) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:294) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:987) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:292) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:261) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:220) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:208) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:158) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 21 common frames omitted
+
+2026-09-06T11:55:36.083+03:00  INFO 402785 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 402785 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T11:55:36.085+03:00  INFO 402785 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T11:55:36.116+03:00  INFO 402785 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-06T11:55:36.116+03:00  INFO 402785 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-06T11:55:36.632+03:00  INFO 402785 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T11:55:36.640+03:00  INFO 402785 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T11:55:36.640+03:00  INFO 402785 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T11:55:36.662+03:00  INFO 402785 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 546 ms
+2026-09-06T11:55:36.754+03:00  INFO 402785 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T11:55:36.807+03:00  WARN 402785 --- [ccsp] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#uploadUsingStream(MultipartFile)
+to {POST [/file/upload]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#uploadFile(MultipartFile) mapped.
+2026-09-06T11:55:36.809+03:00  INFO 402785 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-06T11:55:36.816+03:00  INFO 402785 --- [ccsp] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-06T11:55:36.822+03:00 ERROR 402785 --- [ccsp] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#uploadUsingStream(MultipartFile)
+to {POST [/file/upload]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#uploadFile(MultipartFile) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.solidsudogear.ccsp.CcspApplication.main(CcspApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.6.jar:4.0.6]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'mainController' method 
+com.solidsudogear.ccsp.Controllers.mainController#uploadUsingStream(MultipartFile)
+to {POST [/file/upload]}: There is already 'uploadExpController' bean method
+com.solidsudogear.ccsp.Controller.UploadExpController#uploadFile(MultipartFile) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:646) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:606) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:327) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:459) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:80) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:294) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:987) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:292) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:261) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:220) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:208) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:158) ~[spring-webmvc-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 21 common frames omitted
+
+2026-09-06T11:56:07.438+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T11:56:07.440+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T11:56:07.464+03:00  INFO 403062 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-06T11:56:07.464+03:00  INFO 403062 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-06T11:56:07.997+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T11:56:08.004+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T11:56:08.004+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T11:56:08.023+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 559 ms
+2026-09-06T11:56:08.120+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T11:56:08.301+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-06T11:56:08.392+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T11:56:08.393+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-06T11:56:08.400+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T11:56:08.441+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T11:56:08.445+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 1.225 seconds (process running for 1.448)
+2026-09-06T11:56:08.447+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T11:56:08.447+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T11:56:31.540+03:00  INFO 403062 --- [ccsp] [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-06T11:56:31.541+03:00  INFO 403062 --- [ccsp] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-06T11:56:31.542+03:00  INFO 403062 --- [ccsp] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-06T11:57:38.755+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T11:57:38.757+03:00  INFO 403062 --- [ccsp] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T11:57:38.765+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T11:57:38.769+03:00  WARN 403062 --- [ccsp] [Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T11:57:38.769+03:00  INFO 403062 --- [ccsp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-06T11:57:38.770+03:00  INFO 403062 --- [ccsp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-06T11:57:38.819+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T11:57:38.819+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T11:57:38.929+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T11:57:38.929+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T11:57:38.929+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T11:57:38.934+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 113 ms
+2026-09-06T11:57:38.960+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T11:57:39.007+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-09-06T11:57:39.009+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T11:57:39.009+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-09-06T11:57:39.009+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T11:57:39.019+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T11:57:39.022+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.215 seconds (process running for 92.025)
+2026-09-06T11:57:39.022+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T11:57:39.022+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T11:57:39.023+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T11:57:46.412+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T11:57:46.413+03:00  INFO 403062 --- [ccsp] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T11:57:46.414+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T11:57:46.415+03:00  WARN 403062 --- [ccsp] [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T11:57:46.415+03:00  INFO 403062 --- [ccsp] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-09-06T11:57:46.415+03:00  INFO 403062 --- [ccsp] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-09-06T11:57:46.450+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T11:57:46.450+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T11:57:46.552+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T11:57:46.552+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T11:57:46.552+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T11:57:46.556+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 105 ms
+2026-09-06T11:57:46.583+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T11:57:46.627+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-09-06T11:57:46.629+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T11:57:46.629+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-09-06T11:57:46.629+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T11:57:46.636+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T11:57:46.638+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.2 seconds (process running for 99.641)
+2026-09-06T11:57:46.638+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T11:57:46.638+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T11:57:46.639+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T11:59:51.094+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T11:59:51.095+03:00  INFO 403062 --- [ccsp] [Thread-10] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T11:59:51.095+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T11:59:51.096+03:00  WARN 403062 --- [ccsp] [Thread-10] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T11:59:51.097+03:00  INFO 403062 --- [ccsp] [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-09-06T11:59:51.097+03:00  INFO 403062 --- [ccsp] [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-09-06T11:59:51.132+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T11:59:51.132+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T11:59:51.219+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T11:59:51.220+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T11:59:51.220+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T11:59:51.223+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 90 ms
+2026-09-06T11:59:51.247+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T11:59:51.291+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-09-06T11:59:51.531+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T11:59:51.531+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-09-06T11:59:51.531+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T11:59:51.539+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T11:59:51.541+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.421 seconds (process running for 224.544)
+2026-09-06T11:59:51.541+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T11:59:51.541+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T11:59:51.541+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:04:55.848+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:04:55.848+03:00  INFO 403062 --- [ccsp] [Thread-14] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:04:55.851+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:04:55.851+03:00  WARN 403062 --- [ccsp] [Thread-14] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:04:55.852+03:00  INFO 403062 --- [ccsp] [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-09-06T12:04:55.852+03:00  INFO 403062 --- [ccsp] [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-09-06T12:04:55.886+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:04:55.886+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:04:55.985+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:04:55.986+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:04:55.987+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:04:55.990+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 103 ms
+2026-09-06T12:04:56.023+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:04:56.076+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-09-06T12:04:56.078+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn41: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:04:56.078+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-09-06T12:04:56.078+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:04:56.089+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:04:56.091+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.217 seconds (process running for 529.094)
+2026-09-06T12:04:56.091+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:04:56.091+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:04:56.092+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:05:20.487+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:05:20.488+03:00  INFO 403062 --- [ccsp] [Thread-18] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:05:20.489+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:05:20.489+03:00  WARN 403062 --- [ccsp] [Thread-18] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:05:20.490+03:00  INFO 403062 --- [ccsp] [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-09-06T12:05:20.490+03:00  INFO 403062 --- [ccsp] [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-09-06T12:05:20.521+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:05:20.522+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:05:20.602+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:05:20.603+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:05:20.603+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:05:20.606+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 84 ms
+2026-09-06T12:05:20.631+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:05:20.671+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-09-06T12:05:20.672+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn52: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:05:20.673+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-09-06T12:05:20.673+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:05:20.680+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:05:20.682+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.169 seconds (process running for 553.685)
+2026-09-06T12:05:20.682+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:05:20.682+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:05:20.682+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:05:22.072+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:05:22.073+03:00  INFO 403062 --- [ccsp] [Thread-22] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:05:22.074+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:05:22.075+03:00  WARN 403062 --- [ccsp] [Thread-22] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:05:22.075+03:00  INFO 403062 --- [ccsp] [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-09-06T12:05:22.075+03:00  INFO 403062 --- [ccsp] [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-09-06T12:05:22.103+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:05:22.104+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:05:22.183+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:05:22.183+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:05:22.183+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:05:22.187+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 83 ms
+2026-09-06T12:05:22.209+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:05:22.250+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-09-06T12:05:22.251+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection conn62: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:05:22.251+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-09-06T12:05:22.251+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:05:22.259+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:05:22.261+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.166 seconds (process running for 555.264)
+2026-09-06T12:05:22.261+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:05:22.261+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:05:22.261+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:05:28.654+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:05:28.655+03:00  INFO 403062 --- [ccsp] [Thread-26] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:05:28.656+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:05:28.656+03:00  WARN 403062 --- [ccsp] [Thread-26] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:05:28.656+03:00  INFO 403062 --- [ccsp] [Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-09-06T12:05:28.657+03:00  INFO 403062 --- [ccsp] [Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-09-06T12:05:28.686+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:05:28.686+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:05:28.770+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:05:28.770+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:05:28.771+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:05:28.774+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 87 ms
+2026-09-06T12:05:28.796+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:05:28.833+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-09-06T12:05:28.834+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn72: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:05:28.834+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-09-06T12:05:28.834+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:05:28.843+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:05:28.844+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.168 seconds (process running for 561.848)
+2026-09-06T12:05:28.845+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:05:28.845+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:05:28.845+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:05:37.237+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:05:37.237+03:00  INFO 403062 --- [ccsp] [Thread-30] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:05:37.238+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:05:37.239+03:00  WARN 403062 --- [ccsp] [Thread-30] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:05:37.239+03:00  INFO 403062 --- [ccsp] [Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-09-06T12:05:37.239+03:00  INFO 403062 --- [ccsp] [Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2026-09-06T12:05:37.270+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:05:37.270+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:05:37.346+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:05:37.347+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:05:37.347+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:05:37.350+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 79 ms
+2026-09-06T12:05:37.373+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:05:37.411+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2026-09-06T12:05:37.413+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection conn82: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:05:37.413+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2026-09-06T12:05:37.413+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:05:37.423+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:05:37.424+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.163 seconds (process running for 570.428)
+2026-09-06T12:05:37.425+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:05:37.425+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:05:37.425+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:05:41.814+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:05:41.815+03:00  INFO 403062 --- [ccsp] [Thread-34] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:05:41.816+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:05:41.816+03:00  WARN 403062 --- [ccsp] [Thread-34] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:05:41.816+03:00  INFO 403062 --- [ccsp] [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2026-09-06T12:05:41.817+03:00  INFO 403062 --- [ccsp] [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2026-09-06T12:05:41.846+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:05:41.846+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:05:41.923+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:05:41.923+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:05:41.924+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:05:41.927+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 80 ms
+2026-09-06T12:05:41.950+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:05:41.986+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2026-09-06T12:05:41.987+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection conn92: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:05:41.987+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2026-09-06T12:05:41.987+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:05:41.997+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:05:41.998+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.16 seconds (process running for 575.001)
+2026-09-06T12:05:41.999+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:05:41.999+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:05:41.999+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:06:04.398+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:06:04.399+03:00  INFO 403062 --- [ccsp] [Thread-38] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:06:04.399+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:06:04.403+03:00  WARN 403062 --- [ccsp] [Thread-38] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:06:04.403+03:00  INFO 403062 --- [ccsp] [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2026-09-06T12:06:04.403+03:00  INFO 403062 --- [ccsp] [Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2026-09-06T12:06:04.435+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:06:04.435+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:06:04.515+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:06:04.515+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:06:04.515+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:06:04.519+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 83 ms
+2026-09-06T12:06:04.543+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:06:04.587+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2026-09-06T12:06:04.588+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection conn102: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:06:04.588+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2026-09-06T12:06:04.588+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:06:04.596+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:06:04.597+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.172 seconds (process running for 597.601)
+2026-09-06T12:06:04.598+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:06:04.598+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:06:04.598+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:06:06.989+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:06:06.990+03:00  INFO 403062 --- [ccsp] [Thread-42] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:06:06.990+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:06:06.991+03:00  WARN 403062 --- [ccsp] [Thread-42] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:06:06.991+03:00  INFO 403062 --- [ccsp] [Thread-42] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2026-09-06T12:06:06.991+03:00  INFO 403062 --- [ccsp] [Thread-42] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2026-09-06T12:06:07.021+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:06:07.021+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:06:07.097+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:06:07.097+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:06:07.097+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:06:07.101+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 79 ms
+2026-09-06T12:06:07.125+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:06:07.165+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2026-09-06T12:06:07.166+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection conn112: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:06:07.167+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2026-09-06T12:06:07.167+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:06:07.174+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:06:07.175+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.162 seconds (process running for 600.178)
+2026-09-06T12:06:07.175+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:06:07.175+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:06:07.176+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:06:09.567+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:06:09.567+03:00  INFO 403062 --- [ccsp] [Thread-46] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:06:09.568+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:06:09.568+03:00  WARN 403062 --- [ccsp] [Thread-46] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:06:09.569+03:00  INFO 403062 --- [ccsp] [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2026-09-06T12:06:09.569+03:00  INFO 403062 --- [ccsp] [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2026-09-06T12:06:09.623+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:06:09.623+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:06:09.705+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:06:09.705+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:06:09.705+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:06:09.709+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 85 ms
+2026-09-06T12:06:09.731+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:06:09.773+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2026-09-06T12:06:09.774+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection conn122: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:06:09.774+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2026-09-06T12:06:09.774+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:06:09.781+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:06:09.783+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.186 seconds (process running for 602.786)
+2026-09-06T12:06:09.783+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:06:09.783+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:06:09.783+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:06:12.174+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:06:12.175+03:00  INFO 403062 --- [ccsp] [Thread-50] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:06:12.176+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:06:12.176+03:00  WARN 403062 --- [ccsp] [Thread-50] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:06:12.177+03:00  INFO 403062 --- [ccsp] [Thread-50] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2026-09-06T12:06:12.177+03:00  INFO 403062 --- [ccsp] [Thread-50] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2026-09-06T12:06:12.206+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:06:12.207+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:06:12.279+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:06:12.280+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:06:12.280+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:06:12.283+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 76 ms
+2026-09-06T12:06:12.304+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:06:12.340+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2026-09-06T12:06:12.342+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection conn132: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:06:12.342+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2026-09-06T12:06:12.342+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:06:12.349+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:06:12.350+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.152 seconds (process running for 605.353)
+2026-09-06T12:06:12.350+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:06:12.350+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:06:12.350+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:06:21.745+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:06:21.746+03:00  INFO 403062 --- [ccsp] [Thread-54] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:06:21.747+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:06:21.748+03:00  WARN 403062 --- [ccsp] [Thread-54] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:06:21.748+03:00  INFO 403062 --- [ccsp] [Thread-54] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2026-09-06T12:06:21.748+03:00  INFO 403062 --- [ccsp] [Thread-54] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2026-09-06T12:06:21.776+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:06:21.776+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:06:21.854+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:06:21.855+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:06:21.855+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:06:21.858+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 81 ms
+2026-09-06T12:06:21.880+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:06:21.925+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2026-09-06T12:06:21.926+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection conn142: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:06:21.927+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2026-09-06T12:06:21.927+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:06:21.934+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:06:21.935+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.167 seconds (process running for 614.939)
+2026-09-06T12:06:21.936+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:06:21.936+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:06:21.936+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:06:24.327+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:06:24.328+03:00  INFO 403062 --- [ccsp] [Thread-58] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:06:24.328+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:06:24.329+03:00  WARN 403062 --- [ccsp] [Thread-58] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:06:24.329+03:00  INFO 403062 --- [ccsp] [Thread-58] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2026-09-06T12:06:24.329+03:00  INFO 403062 --- [ccsp] [Thread-58] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2026-09-06T12:06:24.357+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:06:24.357+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:06:24.436+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:06:24.437+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:06:24.437+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:06:24.440+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 82 ms
+2026-09-06T12:06:24.462+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:06:24.500+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2026-09-06T12:06:24.501+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection conn152: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:06:24.501+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2026-09-06T12:06:24.501+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:06:24.508+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:06:24.509+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.159 seconds (process running for 617.512)
+2026-09-06T12:06:24.509+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:06:24.509+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:06:24.510+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:06:25.901+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:06:25.902+03:00  INFO 403062 --- [ccsp] [Thread-62] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:06:25.903+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:06:25.903+03:00  WARN 403062 --- [ccsp] [Thread-62] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:06:25.903+03:00  INFO 403062 --- [ccsp] [Thread-62] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2026-09-06T12:06:25.904+03:00  INFO 403062 --- [ccsp] [Thread-62] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2026-09-06T12:06:25.932+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:06:25.933+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:06:26.006+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:06:26.006+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:06:26.006+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:06:26.010+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 77 ms
+2026-09-06T12:06:26.031+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:06:26.069+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2026-09-06T12:06:26.070+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Added connection conn162: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:06:26.070+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2026-09-06T12:06:26.070+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:06:26.079+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:06:26.080+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.155 seconds (process running for 619.083)
+2026-09-06T12:06:26.080+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:06:26.080+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:06:26.081+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:06:27.470+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:06:27.471+03:00  INFO 403062 --- [ccsp] [Thread-66] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:06:27.472+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:06:27.473+03:00  WARN 403062 --- [ccsp] [Thread-66] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:06:27.473+03:00  INFO 403062 --- [ccsp] [Thread-66] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
+2026-09-06T12:06:27.473+03:00  INFO 403062 --- [ccsp] [Thread-66] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2026-09-06T12:06:27.500+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:06:27.500+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:06:27.587+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:06:27.587+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:06:27.587+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:06:27.593+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 92 ms
+2026-09-06T12:06:27.631+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:06:27.676+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2026-09-06T12:06:27.677+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Added connection conn172: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:06:27.677+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2026-09-06T12:06:27.677+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:06:27.686+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:06:27.687+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.195 seconds (process running for 620.69)
+2026-09-06T12:06:27.688+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:06:27.688+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:06:27.688+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:06:33.079+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:06:33.080+03:00  INFO 403062 --- [ccsp] [Thread-70] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:06:33.081+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:06:33.081+03:00  WARN 403062 --- [ccsp] [Thread-70] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:06:33.081+03:00  INFO 403062 --- [ccsp] [Thread-70] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
+2026-09-06T12:06:33.081+03:00  INFO 403062 --- [ccsp] [Thread-70] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
+2026-09-06T12:06:33.110+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:06:33.111+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:06:33.186+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:06:33.186+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:06:33.186+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:06:33.190+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 79 ms
+2026-09-06T12:06:33.212+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:06:33.248+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
+2026-09-06T12:06:33.249+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-19 - Added connection conn182: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:06:33.250+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
+2026-09-06T12:06:33.250+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:06:33.257+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:06:33.258+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.155 seconds (process running for 626.261)
+2026-09-06T12:06:33.258+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:06:33.258+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:06:33.258+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:07:00.664+03:00  INFO 403062 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-06T12:07:00.665+03:00  INFO 403062 --- [ccsp] [Thread-74] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:07:00.666+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:07:00.666+03:00  WARN 403062 --- [ccsp] [Thread-74] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:07:00.666+03:00  INFO 403062 --- [ccsp] [Thread-74] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
+2026-09-06T12:07:00.667+03:00  INFO 403062 --- [ccsp] [Thread-74] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
+2026-09-06T12:07:00.695+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 403062 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:07:00.695+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:07:00.777+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:07:00.777+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:07:00.777+03:00  INFO 403062 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:07:00.781+03:00  INFO 403062 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 85 ms
+2026-09-06T12:07:00.803+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:07:00.840+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
+2026-09-06T12:07:00.841+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-20 - Added connection conn192: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:07:00.841+03:00  INFO 403062 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
+2026-09-06T12:07:00.841+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:07:00.848+03:00  INFO 403062 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:07:00.849+03:00  INFO 403062 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.161 seconds (process running for 653.853)
+2026-09-06T12:07:00.850+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:07:00.850+03:00  WARN 403062 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:07:00.850+03:00  INFO 403062 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:07:03.831+03:00  INFO 403062 --- [ccsp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:07:03.832+03:00  INFO 403062 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:07:03.833+03:00  WARN 403062 --- [ccsp] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:07:03.833+03:00  INFO 403062 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
+2026-09-06T12:07:03.833+03:00  INFO 403062 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.
+2026-09-06T12:09:56.523+03:00  INFO 408766 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 408766 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:09:56.525+03:00  INFO 408766 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:09:56.551+03:00  INFO 408766 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-06T12:09:56.551+03:00  INFO 408766 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-06T12:09:57.076+03:00  INFO 408766 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:09:57.084+03:00  INFO 408766 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:09:57.084+03:00  INFO 408766 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:09:57.108+03:00  INFO 408766 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 557 ms
+2026-09-06T12:09:57.202+03:00  INFO 408766 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:09:57.383+03:00  INFO 408766 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-06T12:09:57.470+03:00  INFO 408766 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:09:57.471+03:00  INFO 408766 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-06T12:09:57.478+03:00  INFO 408766 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:09:57.514+03:00  INFO 408766 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:09:57.518+03:00  INFO 408766 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 1.205 seconds (process running for 1.426)
+2026-09-06T12:09:57.519+03:00  WARN 408766 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:09:57.520+03:00  WARN 408766 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:12:35.507+03:00  INFO 408766 --- [ccsp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:12:35.509+03:00  INFO 408766 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:12:35.519+03:00  WARN 408766 --- [ccsp] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:12:35.519+03:00  INFO 408766 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-06T12:12:35.521+03:00  INFO 408766 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-06T12:15:42.170+03:00  INFO 410836 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 410836 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:15:42.172+03:00  INFO 410836 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:15:42.198+03:00  INFO 410836 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-06T12:15:42.198+03:00  INFO 410836 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-06T12:15:42.702+03:00  INFO 410836 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:15:42.709+03:00  INFO 410836 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:15:42.710+03:00  INFO 410836 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:15:42.730+03:00  INFO 410836 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 532 ms
+2026-09-06T12:15:42.827+03:00  INFO 410836 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:15:43.015+03:00  INFO 410836 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-06T12:15:43.105+03:00  INFO 410836 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:15:43.106+03:00  INFO 410836 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-06T12:15:43.112+03:00  INFO 410836 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:15:43.149+03:00  INFO 410836 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:15:43.153+03:00  INFO 410836 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 1.184 seconds (process running for 1.389)
+2026-09-06T12:15:43.155+03:00  WARN 410836 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:15:43.155+03:00  WARN 410836 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:20:21.964+03:00  INFO 410836 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 13 class path changes (0 additions, 0 deletions, 13 modifications)
+2026-09-06T12:20:21.969+03:00  INFO 410836 --- [ccsp] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:20:21.975+03:00  INFO 410836 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:20:21.982+03:00  WARN 410836 --- [ccsp] [Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:20:21.983+03:00  INFO 410836 --- [ccsp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-06T12:20:21.984+03:00  INFO 410836 --- [ccsp] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-06T12:20:22.026+03:00  INFO 410836 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 410836 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:20:22.026+03:00  INFO 410836 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:20:22.145+03:00  INFO 410836 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:20:22.146+03:00  INFO 410836 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:20:22.146+03:00  INFO 410836 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:20:22.151+03:00  INFO 410836 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 124 ms
+2026-09-06T12:20:22.183+03:00  INFO 410836 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:20:22.228+03:00  INFO 410836 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-09-06T12:20:22.229+03:00  INFO 410836 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn11: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:20:22.230+03:00  INFO 410836 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-09-06T12:20:22.230+03:00  INFO 410836 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:20:22.241+03:00  INFO 410836 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:20:22.243+03:00  INFO 410836 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.23 seconds (process running for 280.479)
+2026-09-06T12:20:22.244+03:00  WARN 410836 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:20:22.245+03:00  WARN 410836 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:20:22.246+03:00  INFO 410836 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:20:51.643+03:00  INFO 410836 --- [ccsp] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 13 class path changes (0 additions, 2 deletions, 11 modifications)
+2026-09-06T12:20:51.644+03:00  INFO 410836 --- [ccsp] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:20:51.645+03:00  INFO 410836 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:20:51.645+03:00  WARN 410836 --- [ccsp] [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:20:51.646+03:00  INFO 410836 --- [ccsp] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-09-06T12:20:51.646+03:00  INFO 410836 --- [ccsp] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-09-06T12:20:54.509+03:00  INFO 410836 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 410836 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:20:54.510+03:00  INFO 410836 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:20:54.773+03:00  INFO 410836 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:20:54.774+03:00  INFO 410836 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:20:54.774+03:00  INFO 410836 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:20:54.782+03:00  INFO 410836 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 268 ms
+2026-09-06T12:20:54.842+03:00  INFO 410836 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:20:54.925+03:00  INFO 410836 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-09-06T12:20:54.927+03:00  INFO 410836 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn21: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:20:54.928+03:00  INFO 410836 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-09-06T12:20:54.928+03:00  INFO 410836 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:20:54.965+03:00  INFO 410836 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:20:54.969+03:00  INFO 410836 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 0.486 seconds (process running for 313.205)
+2026-09-06T12:20:54.970+03:00  WARN 410836 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:20:54.970+03:00  WARN 410836 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:20:54.971+03:00  INFO 410836 --- [ccsp] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-06T12:21:18.426+03:00  INFO 410836 --- [ccsp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:21:18.426+03:00  INFO 410836 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:21:18.428+03:00  WARN 410836 --- [ccsp] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:21:18.428+03:00  INFO 410836 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-09-06T12:21:18.428+03:00  INFO 410836 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-09-06T12:22:00.683+03:00  INFO 413406 --- [ccsp] [main] c.s.ccsp.CcspApplicationTests            : Starting CcspApplicationTests using Java 25 with PID 413406 (started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:22:00.684+03:00  INFO 413406 --- [ccsp] [main] c.s.ccsp.CcspApplicationTests            : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:22:01.184+03:00  INFO 413406 --- [ccsp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-06T12:22:01.198+03:00  INFO 413406 --- [ccsp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2026-09-06T12:22:01.441+03:00  INFO 413406 --- [ccsp] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-06T12:22:01.472+03:00  INFO 413406 --- [ccsp] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-09-06T12:22:01.767+03:00  INFO 413406 --- [ccsp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-06T12:22:01.787+03:00  INFO 413406 --- [ccsp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-06T12:22:01.907+03:00  INFO 413406 --- [ccsp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:22:01.908+03:00  INFO 413406 --- [ccsp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-06T12:22:01.923+03:00  WARN 413406 --- [ccsp] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-06T12:22:01.939+03:00  INFO 413406 --- [ccsp] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:Files_List]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: FILES_LIST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-06T12:22:02.374+03:00  INFO 413406 --- [ccsp] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-06T12:22:02.406+03:00  INFO 413406 --- [ccsp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-06T12:22:02.523+03:00  WARN 413406 --- [ccsp] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-06T12:22:02.537+03:00  INFO 413406 --- [ccsp] [main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:22:02.858+03:00  INFO 413406 --- [ccsp] [main] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:22:02.930+03:00  INFO 413406 --- [ccsp] [main] c.s.ccsp.CcspApplicationTests            : Started CcspApplicationTests in 2.447 seconds (process running for 3.243)
+2026-09-06T12:22:02.933+03:00  WARN 413406 --- [ccsp] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:22:02.934+03:00  WARN 413406 --- [ccsp] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:22:03.268+03:00  INFO 413406 --- [ccsp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-06T12:22:03.270+03:00  INFO 413406 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-06T12:22:03.272+03:00  INFO 413406 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-06T12:22:24.031+03:00  INFO 413701 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Starting CcspApplication using Java 25 with PID 413701 (/home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp/target/classes started by rahq05 in /home/rahq05/gitHub_files/CCSP-CloudStorage/Logic/ccsp)
+2026-09-06T12:22:24.033+03:00  INFO 413701 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T12:22:24.061+03:00  INFO 413701 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-06T12:22:24.061+03:00  INFO 413701 --- [ccsp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-06T12:22:24.449+03:00  INFO 413701 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-06T12:22:24.465+03:00  INFO 413701 --- [ccsp] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2026-09-06T12:22:24.689+03:00  INFO 413701 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-06T12:22:24.697+03:00  INFO 413701 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-06T12:22:24.698+03:00  INFO 413701 --- [ccsp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-06T12:22:24.716+03:00  INFO 413701 --- [ccsp] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 655 ms
+2026-09-06T12:22:24.804+03:00  INFO 413701 --- [ccsp] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-06T12:22:24.833+03:00  INFO 413701 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-09-06T12:22:25.046+03:00  INFO 413701 --- [ccsp] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-06T12:22:25.064+03:00  INFO 413701 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-06T12:22:25.151+03:00  INFO 413701 --- [ccsp] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:Files_List user=SA
+2026-09-06T12:22:25.152+03:00  INFO 413701 --- [ccsp] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-06T12:22:25.164+03:00  WARN 413701 --- [ccsp] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-06T12:22:25.178+03:00  INFO 413701 --- [ccsp] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:Files_List]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: FILES_LIST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-06T12:22:25.566+03:00  INFO 413701 --- [ccsp] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-06T12:22:25.601+03:00  INFO 413701 --- [ccsp] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-06T12:22:25.674+03:00  WARN 413701 --- [ccsp] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-06T12:22:25.686+03:00  INFO 413701 --- [ccsp] [restartedMain] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-09-06T12:22:25.876+03:00  INFO 413701 --- [ccsp] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2'. Database available at 'jdbc:h2:mem:Files_List'
+2026-09-06T12:22:25.904+03:00  INFO 413701 --- [ccsp] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-06T12:22:25.908+03:00  INFO 413701 --- [ccsp] [restartedMain] com.solidsudogear.ccsp.CcspApplication   : Started CcspApplication in 2.099 seconds (process running for 2.307)
+2026-09-06T12:22:25.909+03:00  WARN 413701 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-06T12:22:25.910+03:00  WARN 413701 --- [ccsp] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-06T12:26:47.106+03:00  INFO 413701 --- [ccsp] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-06T12:26:47.109+03:00  INFO 413701 --- [ccsp] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-06T12:26:47.111+03:00  INFO 413701 --- [ccsp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-06T12:26:47.114+03:00  WARN 413701 --- [ccsp] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-09-06T12:26:47.115+03:00  INFO 413701 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-06T12:26:47.116+03:00  INFO 413701 --- [ccsp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
