@@ -15,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.solidsudogear.ccsp.Exceptions.EmptyFileException;
 import com.solidsudogear.ccsp.Exceptions.FileStorageException;
+import com.solidsudogear.ccsp.Repositories.FileRepo;
 import com.solidsudogear.ccsp.Service.uploadingService;
 
 
@@ -26,6 +27,8 @@ public class uploadingServiceImp implements uploadingService {
 
     @Value("${buffer.size.upload}")
     private int BufferSize;
+
+    private FileRepo fileRepo;
 
     @Override
     public String uploading (MultipartFile file) {
@@ -52,6 +55,10 @@ public class uploadingServiceImp implements uploadingService {
             while((bytesRead = inputStream.read(Buffer) ) !=-1 ){
                 outputStream.write(Buffer, 0, bytesRead);
             }
+
+
+            // you need a mapper here 
+            //fileRepo.save(file);
 
             return file.getOriginalFilename();
 
