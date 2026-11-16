@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -48,6 +49,8 @@ public class mainController  {
     - "producing": what type of data will be returned to you (it's JSON file now)
     
 */
+
+    // this takes out file info from the file got sent via post 
     @PostMapping(value="/getfileInfo", consumes =MediaType.MULTIPART_FORM_DATA_VALUE, produces =MediaType.APPLICATION_JSON_VALUE )
     public ResponseEntity<?> getFileData(@RequestParam("file")MultipartFile userFile){
         
@@ -63,19 +66,80 @@ public class mainController  {
 
     }
 
-    @GetMapping("/Hello")
-    public String greetings() {
-        return "hello";
+    //  just to confirm connections 
+    @GetMapping
+    public ResponseEntity<String> confirming(){
+        return ResponseEntity.ok("request arrived");
     }
 
 
     // this uploads using streamingIO 
     @PostMapping(value="/upload")
-    public ResponseEntity<String> uploadUsingStream(@RequestParam("file") MultipartFile file){
+    public ResponseEntity<String> addFile_uploadUsingStream(@RequestParam("file") MultipartFile file){
         
        
-        String filname = uploadingService.uploading(file);
-        return ResponseEntity.ok("file has uploaded successfully: "+ filname);
+        String filename = uploadingService.uploading(file);
+        return ResponseEntity.ok("file has uploaded successfully: "+ filename);
+        
+
+    }
+
+    // this saves file via getBytes
+    @PostMapping("/add")
+    public ResponseEntity<?> addFile_getBytes(@RequestParam("name")String name , @RequestParam("file") MultipartFile file){
+
+        try{
+
+            if(!file.isEmpty()){
+                // this is what am avoiding!
+                // it will load instantly in the ram which gonna choke it  
+                byte[] bytes = file.getBytes();
+                
+                return new ResponseEntity<>("the file"+name+ "has uploaded successfully",HttpStatus.CREATED);
+            }else{
+                return new ResponseEntity<>("the file"+name+ " is empty! ",HttpStatus.BAD_REQUEST);
+            }
+
+        } catch(IOException e){
+            System.err.println("### uploading failed!!\n");
+
+            return new ResponseEntity<>("#### Fuck You nigger ",HttpStatus.CONFLICT);
+        }
+
+    }
+
+    // uploading files using .getBytes() chokes the RAM on high volumes 
+    @PostMapping(value="/upload")
+    public ResponseEntity<?> uploadFile(@RequestParam("file")MultipartFile file){
+       
+
+
+        // making directory and saving it to files object so each file know where to be saved  
+        // String dir ="uploads";
+        File directory = new File(uploadDir);
+
+        // check if file exist
+        if(!directory.exists()){
+            directory.mkdir();
+        }
+
+        // try-catch block in case of any file uploading failure , if failed it prints the problem and returns badRequest
+        try {
+
+            //makes a ID+fileName 
+            String filename = UUID.randomUUID()+ "  "+file.getOriginalFilename();
+
+            // gets the path and getting ready to upload 
+            Path filePath =  Paths.get(uploadDir +File.separator+ filename);
+
+            //uploading using getBytes() which is the one chokes the ram 
+            Files.write(filePath , file.getBytes());
+            return ResponseEntity.ok("file is uploaded and stored:" + file.getOriginalFilename());
+
+        } catch (IOException e) {
+          e.printStackTrace();
+          return ResponseEntity.badRequest().build();
+        }
         
 
     }
