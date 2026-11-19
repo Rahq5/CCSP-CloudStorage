@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.solidsudogear.ccsp.DTOs.FileDto;
 import com.solidsudogear.ccsp.Entity.FileInfo;
 import com.solidsudogear.ccsp.Service.uploadingService;
 
@@ -37,8 +39,14 @@ public class mainController  {
     @Value("${buffer.size.upload}")
     private int BufferSize;
 
+    // all services should be in a single file names fileServices.java
+    // and the helper methods should be in thier dir too 
     @Autowired
     private uploadingService uploadingService;
+
+    public mainController(uploadingService uploadingService){
+        this.uploadingService = uploadingService;
+    }
     
 /*
 
@@ -83,6 +91,12 @@ public class mainController  {
         
 
     }
+
+    @GetMapping(value="/Files", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<FileDto>> getAllFiles() {
+        // logic to get all files in json 
+    }
+    
 
     
 

@@ -14,13 +14,15 @@ public class FileMetaData {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
+    // recommended to take username since it's unique and immutable
     private Long UserID;
 
     private String fileName;
     private String contentType;
     private String size;
     private String filePath;
-    
+
     private String uploadedDate;
     private String modifiedDate;
     private String description;
