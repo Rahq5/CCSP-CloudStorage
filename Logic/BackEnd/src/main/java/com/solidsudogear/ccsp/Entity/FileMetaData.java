@@ -20,6 +20,7 @@ public class FileMetaData {
     private String contentType;
     private String size;
     private String filePath;
+    
     private String uploadedDate;
     private String modifiedDate;
     private String description;

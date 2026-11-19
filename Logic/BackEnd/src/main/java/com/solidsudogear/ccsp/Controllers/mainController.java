@@ -74,7 +74,7 @@ public class mainController  {
 
 
     // this uploads using streamingIO 
-    @PostMapping(value="/upload")
+    @PostMapping(value="/uploadStream")
     public ResponseEntity<String> addFile_uploadUsingStream(@RequestParam("file") MultipartFile file){
         
        
@@ -84,32 +84,10 @@ public class mainController  {
 
     }
 
-    // this saves file via getBytes
-    @PostMapping("/add")
-    public ResponseEntity<?> addFile_getBytes(@RequestParam("name")String name , @RequestParam("file") MultipartFile file){
-
-        try{
-
-            if(!file.isEmpty()){
-                // this is what am avoiding!
-                // it will load instantly in the ram which gonna choke it  
-                byte[] bytes = file.getBytes();
-                
-                return new ResponseEntity<>("the file"+name+ "has uploaded successfully",HttpStatus.CREATED);
-            }else{
-                return new ResponseEntity<>("the file"+name+ " is empty! ",HttpStatus.BAD_REQUEST);
-            }
-
-        } catch(IOException e){
-            System.err.println("### uploading failed!!\n");
-
-            return new ResponseEntity<>("#### Fuck You nigger ",HttpStatus.CONFLICT);
-        }
-
-    }
+    
 
     // uploading files using .getBytes() chokes the RAM on high volumes 
-    @PostMapping(value="/upload")
+    @PostMapping(value="/uploadByte")
     public ResponseEntity<?> uploadFile(@RequestParam("file")MultipartFile file){
        
 
