@@ -37,6 +37,8 @@ import com.solidsudogear.ccsp.Service.uploadingService;
 
  4. User fingerprint should be labled on the file and authenticated if other user requested it 
 
+ 5. fix size saved to database , should be in MB or GB
+
 */
 
 
@@ -67,8 +69,6 @@ public class uploadingServiceImp implements uploadingService {
     @Override
     public String uploading (MultipartFile file) {
 
-    
-
         // check if file is empty 
         if (file.isEmpty()){
            throw new EmptyFileException("file is empty");
@@ -77,35 +77,15 @@ public class uploadingServiceImp implements uploadingService {
         // helper method to map the rest of the fields
         FileDto fileDto = fileDto_to_fileMetaData(file);
 
-        // to make the path in order to select the path of outputStream
-        Path filePath = Paths.get(uploadDir +File.separator+file.getOriginalFilename());
-        
-        try(
-            // establish stream input to the received file and output to destination
-            InputStream inputStream = file.getInputStream();
-            OutputStream outputStream = Files.newOutputStream(filePath, StandardOpenOption.CREATE);
+        //start stream uploading the file to disk
+        UploadingStream(file);
 
-        ){
-             // declare the byte counter and loop of reading the bytes
-            byte[] Buffer = new byte[BufferSize];
-            int bytesRead; 
+        FileMetaData fileMetaData = modelMapper.map(fileDto,FileMetaData.class);
 
-            while((bytesRead = inputStream.read(Buffer) ) !=-1 ){
-                outputStream.write(Buffer, 0, bytesRead);
-            }
-            
+        // you need a mapper here 
+        fileRepo.save(fileMetaData);
 
-            FileMetaData fileMetaData = modelMapper.map(fileDto,FileMetaData.class);
-
-            // you need a mapper here 
-            fileRepo.save(fileMetaData);
-
-            return file.getOriginalFilename();
-
-        } catch(IOException e){
-            throw new FileStorageException("Failed to store file: " + e.getMessage(), e);
- 
-        }
+        return file.getOriginalFilename();
 
     }
 
@@ -130,6 +110,33 @@ public class uploadingServiceImp implements uploadingService {
         fileDto.setFileName(file.getOriginalFilename());
 
         return fileDto;
+    }
+
+
+    // streaming files bytes to disk
+    public void UploadingStream(MultipartFile file){
+
+        // to make the path in order to select the path of outputStream
+        Path filePath = Paths.get(uploadDir +File.separator+file.getOriginalFilename());
+
+        try(
+            // establish stream input to the received file and output to destination
+            InputStream inputStream = file.getInputStream();
+            OutputStream outputStream = Files.newOutputStream(filePath, StandardOpenOption.CREATE);
+
+        ){
+            // declare the byte counter and loop of reading the bytes
+            byte[] Buffer = new byte[BufferSize];
+            int bytesRead; 
+
+            while((bytesRead = inputStream.read(Buffer) ) !=-1 ){
+                outputStream.write(Buffer, 0, bytesRead);
+            }
+
+        } catch(IOException e){
+            throw new FileStorageException("Failed to store file: " + e.getMessage(), e);
+ 
+        }
     }
     
 }
